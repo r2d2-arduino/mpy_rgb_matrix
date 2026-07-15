@@ -1,6 +1,13 @@
 # mpy_rgb_matrix
 Micropython library for RGB Matrix 32x64 and 64x64
+
 ![Photo of gc9a01 display](/../main/photos/matrix32x64.jpg)
+
+## Hub75 connection:
+### For 32x64 RGB Matrix:
+![Photo of gc9a01 display](/../main/photos/hub75_32x64.png)
+### For 64x64 RGB Matrix:
+![Photo of gc9a01 display](/../main/photos/hub75_64x64.png)
 
 ## File Structure:
 * **examples_32x64/** - a set of examples for the Matrix 32x64.
