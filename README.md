@@ -1,5 +1,5 @@
 # mpy_rgb_matrix
-Micropython library for RGB Matrix 32x64 and 64x64
+Micropython library for RGB Matrix 32x64 and 64x64.
 
 ![Photo of gc9a01 display](/../main/photos/matrix32x64.jpg)
 
@@ -22,6 +22,7 @@ Micropython library for RGB Matrix 32x64 and 64x64
 from rgb_matrix_32x64 import RGBMatrix32x64
 from time import sleep
 
+# Pinout for Esp32 (d1)
 rgb = RGBMatrix32x64( r1 = 25, g1 = 26, b1 = 27,
                       r2 = 21, g2 = 22, b2 = 23,
                       clk = 15, lat = 19, oe = 5,
