@@ -15,7 +15,8 @@ Micropython library for RGB Matrix 32x64 and 64x64
 from rgb_matrix_32x64 import RGBMatrix32x64
 from time import sleep
 
-rgb = RGBMatrix32x64( r1 = 25, g1 = 26, b1 = 27, r2 = 21, g2 = 22, b2 = 23,
+rgb = RGBMatrix32x64( r1 = 25, g1 = 26, b1 = 27,
+                      r2 = 21, g2 = 22, b2 = 23,
                       clk = 15, lat = 19, oe = 5,
                       a = 12, b = 16, c = 17, d = 18 )
 
@@ -41,7 +42,8 @@ The second buffer is used if the graphics portion of frame generation takes a lo
 from rgb_matrix_32x64 import RGBMatrix32x64
 from time import sleep
 
-rgb = RGBMatrix32x64( r1 = 25, g1 = 26, b1 = 27, r2 = 21, g2 = 22, b2 = 23,
+rgb = RGBMatrix32x64( r1 = 25, g1 = 26, b1 = 27,
+                      r2 = 21, g2 = 22, b2 = 23,
                       clk = 15, lat = 19, oe = 5,
                       a = 12, b = 16, c = 17, d = 18,
                       add2ndBuffer = True )
