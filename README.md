@@ -38,8 +38,8 @@ rgb.stop()
 
 ## Display functions:
 * **refresh_matrix ( )** - Resresh the Matrix once.
-* **start ( )** - Start loop of refreshing the matrix in 2nd core.
-* **stop ( )** - Stop loop of refreshing the matrix in 2nd core.
+* **start ( )** - Start loop of refreshing the matrix in 2nd core. For this function, it is better to use a 2-core controller.
+* **stop ( )** - Stop loop of refreshing the matrix in 2nd core. For this function, it is better to use a 2-core controller.
 * **show ( )** - Copy backbuffer to framebuffer (when 2nd buffer enabled only).
 
 # 2nd Buffer
