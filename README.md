@@ -38,8 +38,8 @@ rgb.stop()
 
 ## Display functions:
 * **refresh_matrix ( )** - Resresh the Matrix once.
-* **start ( )** - Start loop of refreshing the matrix in 2nd core. For this function, it is better to use a 2-core controller.
-* **stop ( )** - Stop loop of refreshing the matrix in 2nd core. For this function, it is better to use a 2-core controller.
+* **start ( )** - Start loop of refreshing the matrix in 2nd core (for this function, it is better to use a 2-core controller).
+* **stop ( )** - Stop loop of refreshing the matrix in 2nd core (for this function, it is better to use a 2-core controller).
 * **show ( )** - Copy backbuffer to framebuffer (when 2nd buffer enabled only).
 
 # 2nd Buffer
@@ -64,3 +64,28 @@ rgb.start()
 sleep(5)
 rgb.stop()
 ```
+# Using with a 1-core controller:
+A method for updating the matrix for a single-core controller without **start( )** and **stop( )** functions
+```python
+from rgb_matrix_32x64 import RGBMatrix32x64
+from time import sleep, sleep_ms
+
+# Pinout for Esp32 (d1)
+rgb = RGBMatrix32x64( r1 = 25, g1 = 26, b1 = 27,
+                      r2 = 21, g2 = 22, b2 = 23,
+                      clk = 15, lat = 19, oe = 5,
+                      a = 12, b = 16, c = 17, d = 18 )
+
+rgb.fill( 0 )
+rgb.text( "Matrix", 0, 0, 1 )
+
+try:
+    while True:
+        rgb.refresh_matrix()
+        sleep_ms(1) # Gives the processor a rest
+except:
+    rgb.oe.on() # Turn off matrix cleanly
+    print("Stopped.")
+rgb.oe.on()
+```
+
